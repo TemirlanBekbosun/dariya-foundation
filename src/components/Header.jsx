@@ -4,6 +4,7 @@ import { createPortal } from "react-dom";
 import { Link } from "react-router";
 import Modal from "./Modal";
 import { Menu, X, Phone, Heart, ChevronDown } from "lucide-react";
+import logo from "../app/svg/dariya nuru (2).svg";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -38,7 +39,6 @@ export default function Header() {
 
   return (
     <header className="header">
-    
       <div className="header__top">
         <div className="container header__top-inner">
           <a href="tel:+79001234567" className="header__phone">
@@ -59,10 +59,7 @@ export default function Header() {
       <div className="header__main">
         <div className="container header__inner">
           <Link to="/" className="logo" onClick={closeMobileMenu}>
-            <span className="logo__mark">
-           logo
-            </span>
-            <span className="logo__text">Фонд «Дария»</span>
+            <img src={logo} alt="Логотип фонда" className="logo_foundation" />
           </Link>
 
           {/* Десктопная навигация */}
@@ -167,6 +164,14 @@ export default function Header() {
                 <Link to="/contacts" onClick={closeMobileMenu}>
                   Контакты
                 </Link>
+                <a
+                  href="https://wa.me/996553021999"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={closeMobileMenu}
+                >
+                  Поддержка
+                </a>
               </nav>
 
               {/* Соцсети в мобильной панели — всегда видны */}
@@ -198,7 +203,7 @@ export default function Header() {
               </div>
             </aside>
           </>,
-          document.body
+          document.body,
         )}
 
       <Modal isOpen={callbackOpen} onClose={() => setCallbackOpen(false)} />

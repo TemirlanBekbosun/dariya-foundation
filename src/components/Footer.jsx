@@ -1,17 +1,12 @@
 import { Link } from "react-router";
-import { Heart } from "lucide-react";
+import logo from "../app/svg/dariya nuru (2).svg";
 
 export default function Footer() {
   return (
     <footer className="footer">
       <div className="container footer__grid">
         <div className="footer__brand">
-          <div className="logo">
-            <span className="logo__mark">
-              <Heart size={18} fill="#fff" />
-            </span>
-            <span className="logo__text">Фонд «Дарья»</span>
-          </div>
+          <div className="logo"></div>
           <p>Благотворительный фонд помощи детям с тяжёлыми заболеваниями.</p>
         </div>
         <div>
