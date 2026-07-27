@@ -107,12 +107,12 @@ export default function Home() {
           <div className="hero__overlay" />
         </div>
         <div className="container hero__content">
-          <span className="eyebrow">национальный благотворительный фонд</span>
+          <span className="eyebrow">благотворительный фонд</span>
           <h1 className="hero__title">
             Жизнь — <i>сейчас</i>
           </h1>
           <p className="hero__desc">
-            Мы помогаем детям с онкологическими и гематологическими
+            Мы помогаем всем нуждающимся с онкологическими и гематологическими
             заболеваниями получить лечение вовремя.
           </p>
           <div className="hero__actions">

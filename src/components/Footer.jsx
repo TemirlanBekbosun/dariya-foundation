@@ -7,7 +7,9 @@ export default function Footer() {
       <div className="container footer__grid">
         <div className="footer__brand">
           <div className="logo"></div>
-          <p>Благотворительный фонд помощи детям с тяжёлыми заболеваниями.</p>
+          <p>
+            Благотворительный фонд помощи нуждающимся с тяжёлыми заболеваниями.
+          </p>
         </div>
         <div>
           <h5>Информация</h5>
