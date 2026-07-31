@@ -2,6 +2,8 @@ import { useState } from "react";
 import DonateForm from "./components/DonateForm";
 import SectionReveal from "./components/SectionReveal";
 import Modal from "./components/Modal";
+import DocumentsPage from "./app/documents/Page";
+import DariaStore from "./components/DariaStory"
 import { Link } from "react-router";
 
 const impactData = [
@@ -169,6 +171,28 @@ export default function Home() {
           <DonateForm />
         </div>
       </section>
+ <section className="section section--alt">
+        <div className="container">
+          <span className="eyebrow">партнёры</span>
+          <h2 className="h2">Вместе мы можем больше</h2>
+          <div className="partners-grid">
+            {partners.map((p, i) => (
+              <a
+                key={i}
+                href={p.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="partner-card"
+              >
+                <img src={p.logo} alt={p.name} />
+                <span>{p.name}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+<DariaStore />
 
       {/* Почему важен вклад */}
       <SectionReveal className="section">
@@ -225,45 +249,10 @@ export default function Home() {
       </SectionReveal>
 
       {/* Партнёры */}
-      <section className="section section--alt">
-        <div className="container">
-          <span className="eyebrow">партнёры</span>
-          <h2 className="h2">Вместе мы можем больше</h2>
-          <div className="partners-grid">
-            {partners.map((p, i) => (
-              <a
-                key={i}
-                href={p.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="partner-card"
-              >
-                <img src={p.logo} alt={p.name} />
-                <span>{p.name}</span>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
+     
 
       {/* Документы */}
-      <SectionReveal className="section">
-        <div className="container">
-          <span className="eyebrow">документы</span>
-          <h2 className="h2">Прозрачность и отчётность</h2>
-          <div className="docs-grid">
-            {docs.map((d, i) => (
-              <a key={i} href={d.link} className="doc-card">
-                <span className="doc-card__icon">📄</span>
-                <div>
-                  <strong>{d.title}</strong>
-                  <small>{d.meta}</small>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-      </SectionReveal>
+      <DocumentsPage />
     </>
   );
 }
