@@ -36,10 +36,9 @@ export default function DariaStory() {
           {/* </div> */}
         </div>
 
-        <button>
-          {" "}
-          <Link to={"/about"}> Подробнее </Link>
-        </button>
+        <Link to={"/about"}>
+          <button>Подробнее</button>
+        </Link>
       </div>
     </section>
   );

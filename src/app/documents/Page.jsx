@@ -99,7 +99,7 @@ export default function DocumentsPage() {
     <section className="section">
       <div className="container">
         <span className="eyebrow">Документы</span>
-        <h1 className="h1">Официальные документы фонда</h1>
+        <h2 className="h2">Официальные документы фонда</h2>
         <p className="section__intro">
           Нажмите на документ, чтобы просмотреть его.
         </p>

@@ -45,7 +45,12 @@ export default function Footer() {
             <a href="#">VKontakte</a>
             <a href="#">Telegram</a>
             <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
+            <a
+              target="_blank"
+              href="https://www.instagram.com/dariya_nuru_fond?igsh=MXB5amZsa3FiNzgxYQ%3D%3D&utm_source=qr"
+            >
+              Instagram
+            </a>
           </div>
         </div>
       </div>

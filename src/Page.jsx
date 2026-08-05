@@ -3,7 +3,7 @@ import DonateForm from "./components/DonateForm";
 import SectionReveal from "./components/SectionReveal";
 import Modal from "./components/Modal";
 import DocumentsPage from "./app/documents/Page";
-import DariaStore from "./components/DariaStory"
+import DariaStore from "./components/DariaStory";
 import { Link } from "react-router";
 
 const impactData = [
@@ -96,6 +96,12 @@ const docs = [
   },
 ];
 
+const friends = [
+  { name: "Алексей", photo: "/images/friend1.jpg" },
+  { name: "Марина", photo: "/images/friend2.jpg" },
+  { name: "Илья", photo: "/images/friend3.jpg" },
+];
+
 export default function Home() {
   const [callbackOpen, setCallbackOpen] = useState(false);
 
@@ -140,10 +146,7 @@ export default function Home() {
           <div className="cards-3">
             <div className="card">
               <h4>Чем занимаемся</h4>
-              <p>
-                Оплачиваем лечение, лекарства и реабилитацию детям по всей
-                России.
-              </p>
+              <p>Оплачиваем лечение, лекарства и реабилитацию нуждающимся.</p>
             </div>
             <div className="card">
               <h4>Почему существуем</h4>
@@ -155,8 +158,8 @@ export default function Home() {
             <div className="card">
               <h4>Кому помогаем</h4>
               <p>
-                Детям с тяжёлыми диагнозами и их семьям — от момента постановки
-                диагноза.
+                Нуждающимся с тяжёлыми диагнозами и их семьям — от момента
+                постановки диагноза.
               </p>
             </div>
           </div>
@@ -171,7 +174,40 @@ export default function Home() {
           <DonateForm />
         </div>
       </section>
- <section className="section section--alt">
+
+      <SectionReveal className="section">
+        <div className="container">
+          <h2 className="h2">Друзья фонда</h2>
+          <div className="friends-grid">
+            {friends.map((f, i) => (
+              <div key={i} className="friend-card">
+                <img src={f.photo} alt={f.name} />
+                <span>{f.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </SectionReveal>
+
+      <DariaStore />
+      {/* Почему важен вклад */}
+      <SectionReveal className="section">
+        <div className="container">
+          <span className="eyebrow">почему это важно</span>
+          <h2 className="h2">Почему именно ваш вклад важен</h2>
+          <div className="cards-4">
+            {impactData.map((item, i) => (
+              <div key={i} className="impact-card">
+                <span className="impact-card__icon">{item.icon}</span>
+                <h4>{item.title}</h4>
+                <p>{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </SectionReveal>
+
+      <section className="section section--alt">
         <div className="container">
           <span className="eyebrow">партнёры</span>
           <h2 className="h2">Вместе мы можем больше</h2>
@@ -191,25 +227,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-<DariaStore />
-
-      {/* Почему важен вклад */}
-      <SectionReveal className="section">
-        <div className="container">
-          <span className="eyebrow">почему это важно</span>
-          <h2 className="h2">Почему именно ваш вклад важен</h2>
-          <div className="cards-4">
-            {impactData.map((item, i) => (
-              <div key={i} className="impact-card">
-                <span className="impact-card__icon">{item.icon}</span>
-                <h4>{item.title}</h4>
-                <p>{item.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </SectionReveal>
 
       {/* Истории помощи */}
       <section className="section section--alt">
@@ -249,7 +266,6 @@ export default function Home() {
       </SectionReveal>
 
       {/* Партнёры */}
-     
 
       {/* Документы */}
       <DocumentsPage />

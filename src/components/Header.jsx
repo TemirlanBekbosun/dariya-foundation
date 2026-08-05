@@ -86,11 +86,11 @@ export default function Header() {
               </button>
               <div className="nav__dropdown-menu">
                 <a
-                  href="https://max.ru/your-channel"
+                  href="https://www.instagram.com/dariya_nuru_fond?igsh=MXB5amZsa3FiNzgxYQ%3D%3D&utm_source=qr"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  MAX-канал
+                  Инстаграм
                 </a>
                 <a
                   href="https://t.me/yourchannel"
@@ -180,11 +180,11 @@ export default function Header() {
                   Мы в соц.сетях
                 </span>
                 <a
-                  href="https://max.ru/your-channel"
+                  href="https://www.instagram.com/dariya_nuru_fond?igsh=MXB5amZsa3FiNzgxYQ%3D%3D&utm_source=qr"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  MAX-канал
+                  Инстаграм
                 </a>
                 <a
                   href="https://t.me/yourchannel"
