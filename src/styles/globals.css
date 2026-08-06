@@ -231,11 +231,32 @@ textarea {
   transition:
     transform var(--transition),
     background var(--transition),
-    border-color var(--transition);
+    border-color var(--transition),
+    opacity var(--transition);
 }
 
 .btn:hover {
   transform: translateY(-2px);
+}
+
+.btn--loading {
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.btn__spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: btn-spin 0.8s linear infinite;
+}
+
+@keyframes btn-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .btn--primary {
@@ -245,6 +266,10 @@ textarea {
 
 .btn--primary:hover {
   background: var(--color-accent-hover);
+}
+
+.btn--full {
+  width: 100%;
 }
 
 .btn--outline,

@@ -1,5 +1,6 @@
 import { Outlet, ScrollRestoration, useMatches } from "react-router";
 import { useEffect } from "react";
+import Notification from "../components/Notification";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../styles/globals.css";
@@ -21,6 +22,7 @@ export default function Layout() {
         <Outlet />
       </main>
       <Footer />
+      <Notification />
     </>
   );
 }
